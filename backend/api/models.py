@@ -8,3 +8,12 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class User(models.Model):
+    username = models.CharField(max_length=100)
+    password = models.CharField(max_length=10)
+
+
+    def __str__(self):
+        return self.username
