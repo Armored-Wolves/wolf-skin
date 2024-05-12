@@ -17,7 +17,6 @@ class DetailTodo(generics.RetrieveAPIView):
 class UserAPIView(APIView):
     def get(self, request):
         all_users = User.objects.all().values()
-        print(all_users)
         return Response({'users': list(all_users)}) #Response converts dcit to - JSON
 
     def post(self, request):
