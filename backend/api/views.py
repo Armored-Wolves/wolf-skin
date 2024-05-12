@@ -24,4 +24,4 @@ class UserAPIView(APIView):
             username=request.data['username'],
             password=request.data['password']
         )
-        return Response('DONE')
+        return Response('USER Added to DB')
