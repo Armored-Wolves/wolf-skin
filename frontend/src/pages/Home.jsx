@@ -8,6 +8,22 @@ function Home() {
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
 
+    /* Todo: added BE response
+    useEffect(() => {
+        getNotes();
+    }, []);
+
+    const getNotes = () => {
+        api
+            .get("/api/notes/")
+            .then((res) => res.data)
+            .then((data) => {
+                setNotes(data);
+                console.log(data);
+            })
+            .catch((err) => alert(err));
+    };
+    */
 
     const deleteNote = (id) => {
         api
