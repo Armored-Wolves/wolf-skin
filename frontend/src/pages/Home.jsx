@@ -39,9 +39,9 @@ function Home() {
     const createNote = (e) => {
         e.preventDefault();
         api
-            .post("/api/notes/", { content, title })
+            .post("http://127.0.0.1:8000/api/notes/", { content, title })
             .then((res) => {
-                if (res.status === 201) alert("Note created!");
+                if (res.status === 200) alert("Note created!");
                 else alert("Failed to make note.");
                 getNotes();
             })
