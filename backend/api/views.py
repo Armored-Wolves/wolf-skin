@@ -24,4 +24,6 @@ class UserAPIView(APIView):
             username=request.data['username'],
             password=request.data['password']
         )
-        return Response('USER Added to DB')
+        return Response('USER Added to DB. And I can alse return a new message from BackEnd')
+
+    #TODO: Create Udating
