@@ -41,12 +41,5 @@
     border: solid 2px aqua;
 }
 
-#root p{
-    color: red;
-}
-#root .note-container{
-    border-radius: 15px;
-    border: 2px solid white;
-    margin:10px;
-    padding: 15px;
+.note-container{
 }

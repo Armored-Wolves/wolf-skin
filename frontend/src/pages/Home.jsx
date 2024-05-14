@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
 import api from "../api";
 import Note from "../components/Note"
-import "/res/css/style.css"
 
 function Home() {
     const [notes, setNotes] = useState([]);
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
 
-    /* Todo: added BE response
+
     useEffect(() => {
         getNotes();
     }, []);
 
     const getNotes = () => {
         api
-            .get("/api/notes/")
+            .get("http://127.0.0.1:8000/api/notes/")
             .then((res) => res.data)
             .then((data) => {
                 setNotes(data);
@@ -23,7 +22,7 @@ function Home() {
             })
             .catch((err) => alert(err));
     };
-    */
+
 
     const deleteNote = (id) => {
         api
@@ -41,8 +40,8 @@ function Home() {
         api
             .post("http://127.0.0.1:8000/api/notes/", { content, title })
             .then((res) => {
-                if (res.status === 200) alert("Note created!");
-                else alert("Failed to make note.");
+                if (res.status === 200) console.log("Note Has been created")
+                else console.log("Failed to make note.");
                 getNotes();
             })
             .catch((err) => alert(err));
