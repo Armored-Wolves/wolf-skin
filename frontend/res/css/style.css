@@ -1,17 +1,30 @@
 *{
+    margin:0;
+    padding:0;
     background-color:rgb(0, 0, 0);
     width: 100%;
     color: rgb(247, 238, 238);
 }
 #logo{
-    width: 300px;
-    margin-left: 150px;
-    border: solid 2px aqua;
+    width: 250px;
+    margin: 10px 200px;
+}
+#nav{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#nav a{
+    margin: 20px;
 }
 
 #header{
     display: flex;
-
+}
+#header h1{
+    margin-top: 30px;
 }
 
 #header h1{
@@ -50,3 +63,24 @@
     margin:10px;
     padding: 15px;
 }
+
+#content{
+    width: 90%;
+    height: 150px;
+    margin: 15px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+    text-indent: 20px;
+    border: solid 2px aqua;
+    display: flex;
+}
+
+#create-note-form{
+    border: 3px solid aqua;
+    border-radius: 15px;
+    width: 100%;
+    padding: 15px;
+    margin: 10px
+}
+
+

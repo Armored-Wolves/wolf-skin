@@ -55,6 +55,7 @@ function Home() {
                     <Note note={note} onDelete={deleteNote} key={note.id} />
                 ))}
             </div>
+            <div id="create-note-form">
             <h2>Create a Note</h2>
             <form onSubmit={createNote}>
                 <label htmlFor="title">Title:</label>
@@ -79,6 +80,7 @@ function Home() {
                 <br />
                 <input type="submit" value="Submit"></input>
             </form>
+            </div>
         </div>
     );
 }
