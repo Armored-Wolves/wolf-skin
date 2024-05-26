@@ -14,7 +14,7 @@ function Home() {
 
     const getNotes = () => {
         api
-            .get("http://127.0.0.1:8000/api/notes/")
+            .get("/api/notes/")
             .then((res) => res.data)
             .then((data) => {
                 setNotes(data);
@@ -38,7 +38,7 @@ function Home() {
     const createNote = (e) => {
         e.preventDefault();
         api
-            .post("http://127.0.0.1:8000/api/notes/", { content, title })
+            .post("/api/notes/", { content, title })
             .then((res) => {
                 if (res.status === 200) console.log("Note Has been created")
                 else console.log("Failed to make note.");
@@ -56,30 +56,30 @@ function Home() {
                 ))}
             </div>
             <div id="create-note-form">
-            <h2>Create a Note</h2>
-            <form onSubmit={createNote}>
-                <label htmlFor="title">Title:</label>
-                <br />
-                <input
-                    type="text"
-                    id="title"
-                    name="title"
-                    required
-                    onChange={(e) => setTitle(e.target.value)}
-                    value={title}
-                />
-                <label htmlFor="content">Content:</label>
-                <br />
-                <textarea
-                    id="content"
-                    name="content"
-                    required
-                    value={content}
-                    onChange={(e) => setContent(e.target.value)}
-                ></textarea>
-                <br />
-                <input type="submit" value="Submit"></input>
-            </form>
+                <h2>Create a Note</h2>
+                <form onSubmit={createNote}>
+                    <label htmlFor="title">Title:</label>
+                    <br />
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        required
+                        onChange={(e) => setTitle(e.target.value)}
+                        value={title}
+                    />
+                    <label htmlFor="content">Content:</label>
+                    <br />
+                    <textarea
+                        id="content"
+                        name="content"
+                        required
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
+                    ></textarea>
+                    <br />
+                    <input type="submit" value="Submit"></input>
+                </form>
             </div>
         </div>
     );
