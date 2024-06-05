@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),  # routing configuration
-    path('notes/', include('api.urls'))
+    path('notes/', include('api.urls')),
+    path('user/', include('api.urls'))
 ]

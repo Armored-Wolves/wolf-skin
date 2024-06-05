@@ -5,17 +5,17 @@ from .models import Todo, User
 from .serializers import TodoSerializer, UserSerializer
 
 
-class UserAPIView(APIView):
-    def get(self, request):
-        all_users = User.objects.all()
-        return Response({'users': UserSerializer(all_users, many=True).data}) #Response converts dict to - JSON
-
+class UserView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
     def post(self, request):
+        serializer = UserSerializer(data=request.data)
         post_new = User.objects.create(
             username=request.data['username'],
             password=request.data['password']
         )
-        return Response('USER Added to DB. And I can alse return a new message from BackEnd')
+        print(post_new)
+        return Response(200)
 
 class ListTodo(generics.ListAPIView):
     queryset = Todo.objects.all()
