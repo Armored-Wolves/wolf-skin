@@ -1,10 +1,10 @@
 import Form from "../components/Form";
 
-function Registration() {
+function Login() {
 
     return <>
-        <Form route="http://127.0.0.1:8000/api/user/register" method="registration"></Form>
+        <Form route="http://127.0.0.1:8000/api/token/" method="login"></Form>
     </>
 }
 
-export default Registration;
+export default Login;
