@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',  # added REST
     "rest_framework.authtoken",  #Token app registered
-    'corsheaders'
+    'corsheaders',
+    "dj_rest_auth"
 ]
 
 MIDDLEWARE = [

@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),  # routing configuration
     path('notes/', include('api.urls')),
-    path('user/', include('api.urls'))
+    path('user/', include('api.urls')),
+    path("api/v1/dj-rest-auth/", include("dj_rest_auth.urls")),
 ]
