@@ -37,10 +37,12 @@ function Form({ route, method }) {
     return (
         <>
             <form onSubmit={handleSubmit}>
+            <div id='wrapper'>
                 <h1>{name}</h1>
                 <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="username"></input>
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="password"></input>
                 <button type="submit">{name}</button>
+            </div>
             </form>
         </>
     )
