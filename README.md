@@ -12,4 +12,7 @@ Backend:
 
 https://github.com/Armored-Wolves/wolf-skin/assets/45716437/a980eabd-fa71-4167-8f7a-992885a440b4
 
-Create ".env" file with text: VITE_API_URL="http://127.0.0.1:8000"
+
+
+https://github.com/Armored-Wolves/wolf-skin/assets/45716437/240455d3-3bf3-48af-b1fd-e801a0060e88
+
