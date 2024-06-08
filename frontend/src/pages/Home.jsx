@@ -26,7 +26,7 @@ function Home() {
 
     const deleteNote = (id) => {
         api
-            .delete(`http://127.0.0.1:8000/api/notes/${id}`)
+            .delete(`http://127.0.0.1:8000/api/notes/delete/${id}/`)
             .then((res) => {
                 if (res.status === 204) console.log(id + " Notes deleted");
                 else alert("Failed to delete note.");

@@ -13,7 +13,7 @@ function ProtectedRoute({ children }) {
     const refreshToken = async () => {                    // функия для автоматического обновления refresh token
         const refreshToken = localStorage.getItem(REFRESH_TOKEN);
         try {
-            const res = await api.post("/api/token/refresh", {
+            const res = await api.post("http://127.0.0.1:8000/api/token/refresh", {
                 refresh: refreshToken,
             });
             if (res.status === 200) {

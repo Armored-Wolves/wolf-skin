@@ -1,8 +1,7 @@
 from django.urls import path
-from .views import ListTodo, DetailTodo, UserView
+from . import views
 
 urlpatterns = [
-    path('user/', UserView.as_view()),
-    path('notes/', ListTodo.as_view()),
-    path('notes/<int:pk>', DetailTodo.as_view()),
+    path('notes/', views.NoteListCreate.as_view(), name='note-list'),
+    path('notes/delete/<int:pk>/', views.NoteDelete.as_view(), name='delete-note')
 ]
