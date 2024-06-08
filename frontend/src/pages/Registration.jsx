@@ -7,4 +7,4 @@ function Registration() {
     </>
 }
 
-export default Registration;g
+export default Registration;
